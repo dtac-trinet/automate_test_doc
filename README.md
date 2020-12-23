@@ -54,29 +54,57 @@ $ fastlane jenkinsci
 # Artifact store in Derived dir.
 # ${PWD}/DerivedData/Build/Products/Debug-iphonesimulator/dtac.app
 ```
+### For Android
+move current path to app's repository
+```bash
+$ cd ~/robot_app/${repo_name}
+```
+Checkout branch to run test(in case use `develop` branch)
+```bash
+$ git checkout develop
+```
+Change JAVA_HOME to jdk8 and build with fastlane
+```bash
+$ JAVA_HOME=JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home fastlane beta
+# Artifact store in Derived dir.
+# ${PWD}/app/build/outputs/apk/prod/release/
+```
+
 
 
 ## Prepare Android Steps
-- Start appium
+Start appium
 ```bash
 $ appium -p 4723 && appium -p 4725
 ```
-- Move current dir to emulator workspace to use library qt
+Move current dir to emulator workspace to use library qt
 ```bash
 $ cd $(dirname $(which emulator))
 ```
-- Get name of devices to run emulate
+Get name of devices to run emulate
 ```bash
 $ ./emulator -list-avds
 ```
-- Start emulator with device name in below output
+Start emulator with device name in below output
 ```bash
 $ ./emulator @<device_name>
 ## Example for optimize boot time
 $ ./emulator @Nexus_5_API_28 -no-boot-anim -no-window
 ```
+Clean package installed
+```bash
+$ adb uninstall $(adb shell pm list packages|grep th.co|awk '{split($0,array,":")} END{print array[2]}')
+```
+Install current app to emulate
+```bash
+$ adb install -r $(find ./app/build/outputs/apk/prod/release/ -iname "*.apk")
+```
 
 ## Prepare iOS Step
+Start appium
+```bash
+$ appium -p 4723 && appium -p 4725
+```
 list device available to simulate
 ```bash
 $ xcrun simctl list
@@ -90,6 +118,7 @@ Start simulator
 # find available device_id to start simulator
 $ xcrun simctl list devices available
 # use previous id
+$ xcrun simctl erase <device_id>
 $ xcrun simctl boot <device_id>
 $ open simulator -CurrentDeviceUDID <device_id>
 ```
@@ -99,7 +128,7 @@ $ xcrun simctl install DerivedData/Build/Products/Debug-iphonesimulator/dtac.app
 ```
 
 ## Run robot test
-- move current dir to repo
+move current dir to repo
 ```bash
 $ cd ~/robot_app/AndroiddtacappAutomateTest/testcase
 ```
