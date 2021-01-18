@@ -22,23 +22,23 @@ all in latest version.
 
 ## How to start web service
 - Open lauchpad > BrewServiceManubar  
-<img src="img/brewservicemenubar.png" alt="" width="750" height="">
+    <img src="img/brewservicemenubar.png" alt="" width="750" height="">  
 - In menubar > check `jenkins-lts`  and you can manage all service:
+    <img src="img/brewjenkins.png" alt="" width="250" height="">
     - Start all  
     - Stop all  
     - Restart all  
-<img src="img/brewjenkins.png" alt="" width="450" height="">
 - In terminal you can start ngrok services in backgroud process.
     - To start ngrok  
-    ```bash
-    # Start process in launchd
-    $ launchctl load -w ~/Library/LaunchAgents/io.dtac.ngrok.plist
-    ```
+        ```bash
+        # Start process in launchd
+        $ launchctl load -w ~/Library/LaunchAgents/io.dtac.ngrok.plist
+        ```
     - To stop ngrok  
-    ```bash
-    # Stop ngrok and unload from launchd
-    $ launchctl unload -w ~/Library/LaunchAgents/io.dtac.ngrok.plist
-    ```
+        ```bash
+        # Stop ngrok and unload from launchd
+        $ launchctl unload -w ~/Library/LaunchAgents/io.dtac.ngrok.plist
+        ```
 - Open any browser and go to `https://dtac.ap.ngrok.io`, then it should redirect to github oauth api.  
 <img src="img/jenkinslogin.png" alt="" width="450" height="">
 - login with your account, so your browser callback to jenkins web-service
@@ -64,7 +64,8 @@ all in latest version.
     - Select list of git branchs in **SELECTED_BRANCH** box and `build`.  
     <img src="img/jenkins-buildwithparam-box.png" alt="" width="450" height="">
     - See `robot results` with original report like above job.
-
+  
+    
 ### Robotframework test with Android application
 - Open job's folder `Robot-iOS`.
 - See multi-branch builder in `Auto Build and Test with multiple branch`  
