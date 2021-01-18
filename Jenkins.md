@@ -23,7 +23,7 @@ all in latest version.
 ## How to start web service
 - Open lauchpad > BrewServiceManubar  
     <img src="img/brewservicemenubar.png" alt="" width="750" height="">  
-- In menubar > check `jenkins-lts`  and you can manage all service:
+- In menubar > check `jenkins-lts`  and you can manage all service:  
     <img src="img/brewjenkins.png" alt="" width="250" height="">
     - Start all  
     - Stop all  
