@@ -40,7 +40,7 @@ all in latest version.
         $ launchctl unload -w ~/Library/LaunchAgents/io.dtac.ngrok.plist
         ```
 - Open any browser and go to `https://dtac.ap.ngrok.io`, then it should redirect to github oauth api.  
-<img src="img/jenkinslogin.png" alt="" width="450" height="">
+    <img src="img/jenkinslogin.png" alt="" width="450" height="">
 - login with your account, so your browser callback to jenkins web-service
 
 ## Jenkins dashboard
@@ -48,42 +48,41 @@ all in latest version.
 ### Robotframework test with iOS application
 - Open job's folder `Robot-iOS`.
 - See multi-branch builder in `Auto Build and Test with multiple branch`  
-<img src="img/jenkins-multi-ios.png" alt="" width="750" height="">
+    <img src="img/jenkins-multi-ios.png" alt="" width="750" height="">
     - In each branch pipeline test with latest iOS version(14.3)  
-    <img src="img/jenkins-multi-ios-dashboard.png" alt="" width="750" height="">
+        <img src="img/jenkins-multi-ios-dashboard.png" alt="" width="750" height="">
     - If you re-build in branch, in left menu select `build now` 
-    <img src="img/jenkins-buildnow.png" alt="" width="100" height="">
+        <img src="img/jenkins-buildnow.png" alt="" width="100" height="">
     - After pipeline success you can see summary report and relative with previous build in top page.  
-    <img src="img/jenkins-robotgraph.png" alt="" width="450" height="">
-    - Or see more detail for `robot results` with original report in left menu 
-    <img src="img/jenkins-robotreport.png" alt="" width="100" height="">  
-    <img src="img/jenkins-robotreport-detail.png" alt="" width="750" height="">  
+        <img src="img/jenkins-robotgraph.png" alt="" width="450" height="">
+    - Or see more detail for `robot results` with original report in left menu <img src="img/jenkins-robotreport.png" alt="" width="100" height="">  
+        <img src="img/jenkins-robotreport-detail.png" alt="" width="750" height="">  
 - Or run CI with manaul selecte branch in `Pipeline Selected branch for manual Robot test`  
     - Click `Build with Parameters` to start full robot test.
-    <img src="img/jenkins-buildwithparam.png" alt="" width="150" height="">
+        <img src="img/jenkins-buildwithparam.png" alt="" width="150" height="">
     - Select list of git branchs in **SELECTED_BRANCH** box and `build`.  
-    <img src="img/jenkins-buildwithparam-box.png" alt="" width="450" height="">
+        <img src="img/jenkins-buildwithparam-box.png" alt="" width="450" height="">
     - See `robot results` with original report like above job.
   
     
 ### Robotframework test with Android application
 - Open job's folder `Robot-iOS`.
 - See multi-branch builder in `Auto Build and Test with multiple branch`  
-<img src="img/jenkins-multi-android.png" alt="" width="750" height="">
+    <img src="img/jenkins-multi-android.png" alt="" width="750" height="">
     - In each branch pipeline test with latest android OS version(11)  
-    <img src="img/jenkins-multi-android-dashboard.png" alt="" width="750" height="">
+        <img src="img/jenkins-multi-android-dashboard.png" alt="" width="750" height="">
     - If you re-build in branch, in left menu select `build now` 
-    <img src="img/jenkins-buildnow.png" alt="" width="100" height="">
+        <img src="img/jenkins-buildnow.png" alt="" width="100" height="">
     - After pipeline success you can see summary report and relative with previous build in top page.  
-    <img src="img/jenkins-robotgraph.png" alt="" width="450" height="">
+        <img src="img/jenkins-robotgraph.png" alt="" width="450" height="">
     - Or see more detail for `robot results` with original report in left menu 
-    <img src="img/jenkins-robotreport.png" alt="" width="100" height="">  
-    <img src="img/jenkins-robotreport-detail.png" alt="" width="750" height="">  
+        <img src="img/jenkins-robotreport.png" alt="" width="100" height="">  
+        <img src="img/jenkins-robotreport-detail.png" alt="" width="750" height="">  
 - Or run CI with manaul selecte branch in `Pipeline Selected branch for manual Robot test`
     - Click `Build with Parameters` to start full robot test.
-    <img src="img/jenkins-buildwithparam.png" alt="" width="150" height="">
+        <img src="img/jenkins-buildwithparam.png" alt="" width="150" height="">
     - Select list of git branchs in **SELECTED_BRANCH** box and `build`.  
-    <img src="img/jenkins-buildwithparam-box.png" alt="" width="450" height="">
+        <img src="img/jenkins-buildwithparam-box.png" alt="" width="450" height="">
     - See `robot results` with original report like above job.
 
 ## Support contact
