@@ -1,6 +1,6 @@
 ```yaml
 project: Automate mobile tester
-org: OnionCheck
+org: OnionChack
 maintainer:
     name: Watcharin YangNgam(@startloj)
     e-mail: watcharin.st11@gmail.com
