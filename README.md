@@ -181,7 +181,7 @@ For iOs
 | phonePostpaid                      | Login with OTP (Postpaid), New Facebook Login – Add New Number (Postpaid), Old Facebook Login – Add New Number (Postpaid)    |
 | phonePrepaid                       | Login with OTP (Prepaid), New Facebook Login – Add New Number (Prepaid), Old Facebook Login – Add New Number (Prepaid)       |
 | FarmPostpaid                       | New Facebook Login – Number Paired (Postpaid), Old Facebook Login – Number Paired (Postpaid)                                 |
-| FarmPrepaid1                       | New Facebook Login – Number Paired (Prepaid), Old Facebook Login – Number Paired (Prepaid)                                   |
+| FarmPrepaid                        | New Facebook Login – Number Paired (Prepaid), Old Facebook Login – Number Paired (Prepaid)                                   |
 
 For android
 | Tag                                | Test case                                                                                                                    |
@@ -195,7 +195,7 @@ For android
 | phonePostLogout                    | Facebook is logout but remembered the account – Add New Number (Postpaid)                                                    |
 | phonePreLogout                     | Facebook is logout but remembered the account – Add New Number (Prepaid)                                                     |
 | FarmPostpaid                       | New Facebook Login – Number Paired (Postpaid), Old Facebook Login – Number Paired (Postpaid)                                 |
-| FarmPrepaid1                       | New Facebook Login – Number Paired (Prepaid), Old Facebook Login – Number Paired (Prepaid)                                   |
+| FarmPrepaid                        | New Facebook Login – Number Paired (Prepaid), Old Facebook Login – Number Paired (Prepaid)                                   |
 | FarmPostPermission                 | Login Facebook but not bind Permission – Number Paired (Postpaid)                                                            |
 | FarmPrePermission                  | Login Facebook but not bind Permission – Number Paired (Prepaid)                                                             |
 | FarmPreLogout                      | Facebook is Logout but remembered the account – Number Paired (Prepaid)                                                      |
