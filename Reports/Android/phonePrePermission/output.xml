@@ -1,0 +1,2586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20201223 12:18:11.680" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
+<suite source="/Users/tararatwongsansee/AndroiddtacappAutomateTest/testcase/Login.robot" id="s1" name="Login">
+<test id="s1-t1" name="[F3_Login_0103]Login Facebook but not bind Permission Dtac - Add New Number_Prepaid">
+<kw name="Open App Android Emu" library="common">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${ar_OS}</arg>
+<arg>platformVersion=${ar_pfversion}</arg>
+<arg>deviceName=Android</arg>
+<arg>udid=${ar_udid}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+</arguments>
+<assign>
+<var>${appium1}</var>
+</assign>
+<msg timestamp="20201223 12:18:22.673" level="INFO">${appium1} = 1</msg>
+<status status="PASS" endtime="20201223 12:18:22.673" starttime="20201223 12:18:12.011"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${appium1}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:22.674" level="INFO">${appium1} = 1</msg>
+<status status="PASS" endtime="20201223 12:18:22.674" starttime="20201223 12:18:22.674"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:22.675" starttime="20201223 12:18:12.011"></status>
+</kw>
+<kw name="Verify Login Welcome Page" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>40s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${Lbl_GettingStarted}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Lbl_GettingStarted}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:26.276" starttime="20201223 12:18:22.676"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:26.276" starttime="20201223 12:18:22.675"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${Lbl_GettingStarted}</arg>
+<arg>${Getting_Started}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:26.908" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'tv_label_get_start')]'.</msg>
+<status status="PASS" endtime="20201223 12:18:26.909" starttime="20201223 12:18:26.278"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:26.909" starttime="20201223 12:18:26.277"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:26.998" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'tv_label_get_start')]' text is 'Getting started' </msg>
+<msg timestamp="20201223 12:18:26.999" level="INFO">${actual} = Getting started</msg>
+<status status="PASS" endtime="20201223 12:18:26.999" starttime="20201223 12:18:26.909"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:27.000" starttime="20201223 12:18:26.999"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.000" level="INFO">Expected 'Getting started' and Actual 'Getting started' result</msg>
+<status status="PASS" endtime="20201223 12:18:27.000" starttime="20201223 12:18:27.000"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.000" starttime="20201223 12:18:26.276"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${btn_singin_phone_number}</arg>
+<arg>${Signin_WithPhoneNumber}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.105" level="INFO">Current page contains element 'xpath=//android.widget.Button[contains(@resource-id,'buttonSignInWithPhoneNumber')]'.</msg>
+<status status="PASS" endtime="20201223 12:18:27.105" starttime="20201223 12:18:27.002"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.105" starttime="20201223 12:18:27.001"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.220" level="INFO">Element 'xpath=//android.widget.Button[contains(@resource-id,'buttonSignInWithPhoneNumber')]' text is 'Sign in with phone number' </msg>
+<msg timestamp="20201223 12:18:27.220" level="INFO">${actual} = Sign in with phone number</msg>
+<status status="PASS" endtime="20201223 12:18:27.220" starttime="20201223 12:18:27.105"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:27.221" starttime="20201223 12:18:27.220"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.222" level="INFO">Expected 'Sign in with phone number' and Actual 'Sign in with phone number' result</msg>
+<status status="PASS" endtime="20201223 12:18:27.222" starttime="20201223 12:18:27.221"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.222" starttime="20201223 12:18:27.000"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${Lbl_singin_facebook}</arg>
+<arg>${Signin_WithFacebook}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.268" level="INFO">Current page contains element 'android=new UiSelector().text("Sign in with Facebook")'.</msg>
+<status status="PASS" endtime="20201223 12:18:27.269" starttime="20201223 12:18:27.223"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.269" starttime="20201223 12:18:27.223"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.325" level="INFO">Element 'android=new UiSelector().text("Sign in with Facebook")' text is 'Sign in with Facebook' </msg>
+<msg timestamp="20201223 12:18:27.325" level="INFO">${actual} = Sign in with Facebook</msg>
+<status status="PASS" endtime="20201223 12:18:27.325" starttime="20201223 12:18:27.269"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:27.326" starttime="20201223 12:18:27.326"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.327" level="INFO">Expected 'Sign in with Facebook' and Actual 'Sign in with Facebook' result</msg>
+<status status="PASS" endtime="20201223 12:18:27.327" starttime="20201223 12:18:27.326"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.327" starttime="20201223 12:18:27.222"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${link_bySigning}</arg>
+</arguments>
+<assign>
+<var>${Get_BySigning}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.405" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'tv_term_first')]' text is 'By signing in you agree to our' </msg>
+<msg timestamp="20201223 12:18:27.406" level="INFO">${Get_BySigning} = By signing in you agree to our</msg>
+<status status="PASS" endtime="20201223 12:18:27.406" starttime="20201223 12:18:27.327"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${link_bySigning}</arg>
+<arg>${Get_BySigning}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.482" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'tv_term_first')]'.</msg>
+<status status="PASS" endtime="20201223 12:18:27.482" starttime="20201223 12:18:27.407"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.482" starttime="20201223 12:18:27.407"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.564" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'tv_term_first')]' text is 'By signing in you agree to our' </msg>
+<msg timestamp="20201223 12:18:27.565" level="INFO">${actual} = By signing in you agree to our</msg>
+<status status="PASS" endtime="20201223 12:18:27.565" starttime="20201223 12:18:27.483"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:27.566" starttime="20201223 12:18:27.565"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.566" level="INFO">Expected 'By signing in you agree to our' and Actual 'By signing in you agree to our' result</msg>
+<status status="PASS" endtime="20201223 12:18:27.566" starttime="20201223 12:18:27.566"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.566" starttime="20201223 12:18:27.406"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${link_policy}</arg>
+</arguments>
+<assign>
+<var>${Get_RrivacyPolicy}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.629" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'linkPolicy')]' text is 'privacy policy &amp; terms of service' </msg>
+<msg timestamp="20201223 12:18:27.630" level="INFO">${Get_RrivacyPolicy} = privacy policy &amp; terms of service</msg>
+<status status="PASS" endtime="20201223 12:18:27.630" starttime="20201223 12:18:27.566"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${link_policy}</arg>
+<arg>${Get_RrivacyPolicy}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.702" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'linkPolicy')]'.</msg>
+<status status="PASS" endtime="20201223 12:18:27.702" starttime="20201223 12:18:27.631"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.702" starttime="20201223 12:18:27.631"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.798" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'linkPolicy')]' text is 'privacy policy &amp; terms of service' </msg>
+<msg timestamp="20201223 12:18:27.798" level="INFO">${actual} = privacy policy &amp; terms of service</msg>
+<status status="PASS" endtime="20201223 12:18:27.798" starttime="20201223 12:18:27.702"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:27.799" starttime="20201223 12:18:27.798"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.799" level="INFO">Expected 'privacy policy &amp; terms of service' and Actual 'privacy policy &amp; terms of service' result</msg>
+<status status="PASS" endtime="20201223 12:18:27.799" starttime="20201223 12:18:27.799"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.799" starttime="20201223 12:18:27.630"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${btn_registerNewPreidSim}</arg>
+<arg>${RegisterNewPrepaidSIM}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.866" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'buttonRegisterNewPrepaidSim')]'.</msg>
+<status status="PASS" endtime="20201223 12:18:27.866" starttime="20201223 12:18:27.800"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.866" starttime="20201223 12:18:27.800"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.960" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'buttonRegisterNewPrepaidSim')]' text is 'Register new prepaid SIM' </msg>
+<msg timestamp="20201223 12:18:27.960" level="INFO">${actual} = Register new prepaid SIM</msg>
+<status status="PASS" endtime="20201223 12:18:27.960" starttime="20201223 12:18:27.867"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:27.961" starttime="20201223 12:18:27.960"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.961" level="INFO">Expected 'Register new prepaid SIM' and Actual 'Register new prepaid SIM' result</msg>
+<status status="PASS" endtime="20201223 12:18:27.961" starttime="20201223 12:18:27.961"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:27.961" starttime="20201223 12:18:27.799"></status>
+</kw>
+<kw name="Verify Capture ScreenShot" library="common">
+<kw name="Get Variable Value" library="BuiltIn">
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${0}</arg>
+</arguments>
+<assign>
+<var>${screenshot_index}</var>
+</assign>
+<msg timestamp="20201223 12:18:27.969" level="INFO">${screenshot_index} = 0</msg>
+<status status="PASS" endtime="20201223 12:18:27.969" starttime="20201223 12:18:27.962"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${screenshot_index.__add__(1)}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:27.969" level="INFO">${screenshot_index} = 1</msg>
+<status status="PASS" endtime="20201223 12:18:27.970" starttime="20201223 12:18:27.969"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${time}=</arg>
+<arg>Evaluate</arg>
+<arg>str(time.time())</arg>
+<arg>time</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:27.970" starttime="20201223 12:18:27.970"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>Verify_${TEST NAME}_${screenshot_index}_${ar_Lag}_${ar_OS}.png</arg>
+</arguments>
+<msg timestamp="20201223 12:18:28.394" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_1_EN_Android.png"&gt;&lt;img src="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_1_EN_Android.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:18:28.395" starttime="20201223 12:18:27.970"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:28.395" starttime="20201223 12:18:27.962"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:28.395" starttime="20201223 12:18:22.675"></status>
+</kw>
+<kw name="Login facebook" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_singin_facebook}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_singin_facebook}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:28.443" starttime="20201223 12:18:28.396"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:28.443" starttime="20201223 12:18:28.396"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_singin_facebook}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:28.444" level="INFO">Clicking element 'android=UiSelector().resourceId("th.co.crie.tron2.android:id/buttonSignInWithFacebook")'.</msg>
+<status status="PASS" endtime="20201223 12:18:31.114" starttime="20201223 12:18:28.443"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_ContinueHaveFB}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword_ContinueHaveFB}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_ContinueHaveFB}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:31.176" starttime="20201223 12:18:31.115"></status>
+</kw>
+<msg timestamp="20201223 12:18:31.176" level="INFO">${statusKeyword_ContinueHaveFB} = True</msg>
+<status status="PASS" endtime="20201223 12:18:31.176" starttime="20201223 12:18:31.114"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword_ContinueHaveFB}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${btn_ContinueHaveFB}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_ContinueHaveFB}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:31.178" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.ScrollView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button'.</msg>
+<status status="PASS" endtime="20201223 12:18:31.295" starttime="20201223 12:18:31.178"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:31.295" starttime="20201223 12:18:31.177"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_Continue_fbName}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword_userFB}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_Continue_fbName}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201223 12:18:38.146" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:18:38.146" starttime="20201223 12:18:37.511"></status>
+</kw>
+<msg timestamp="20201223 12:18:38.147" level="FAIL">Element 'xpath=//android.widget.Button[contains(@resource-id,'u_0_5')]' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20201223 12:18:38.147" starttime="20201223 12:18:31.296"></status>
+</kw>
+<msg timestamp="20201223 12:18:38.148" level="INFO">${statusKeyword_userFB} = False</msg>
+<status status="PASS" endtime="20201223 12:18:38.148" starttime="20201223 12:18:31.295"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword_userFB}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${btn_Continue_fbName}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:38.149" starttime="20201223 12:18:38.148"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_Continueface}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword_userFB}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_Continueface}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201223 12:18:43.560" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:18:43.560" starttime="20201223 12:18:43.168"></status>
+</kw>
+<msg timestamp="20201223 12:18:43.561" level="FAIL">Element 'android=new UiSelector().className("android.widget.Button").text("ดำเนินการต่อ")' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20201223 12:18:43.561" starttime="20201223 12:18:38.149"></status>
+</kw>
+<msg timestamp="20201223 12:18:43.562" level="INFO">${statusKeyword_userFB} = False</msg>
+<status status="PASS" endtime="20201223 12:18:43.562" starttime="20201223 12:18:38.149"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword_userFB}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${btn_Continueface}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:43.563" starttime="20201223 12:18:43.562"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:43.563" starttime="20201223 12:18:28.395"></status>
+</kw>
+<kw name="Verify My dtac Number Page" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>40s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${labelMydtacNumbers}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${labelMydtacNumbers}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:43.612" starttime="20201223 12:18:43.565"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:43.613" starttime="20201223 12:18:43.564"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelMydtacNumbers}</arg>
+<arg>${Mydtac_Numbers}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:43.645" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelTitleNavigation")'.</msg>
+<status status="PASS" endtime="20201223 12:18:43.645" starttime="20201223 12:18:43.614"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:43.645" starttime="20201223 12:18:43.613"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:43.697" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelTitleNavigation")' text is 'My dtac Numbers' </msg>
+<msg timestamp="20201223 12:18:43.698" level="INFO">${actual} = My dtac Numbers</msg>
+<status status="PASS" endtime="20201223 12:18:43.698" starttime="20201223 12:18:43.645"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:43.699" starttime="20201223 12:18:43.698"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:43.700" level="INFO">Expected 'My dtac Numbers' and Actual 'My dtac Numbers' result</msg>
+<status status="PASS" endtime="20201223 12:18:43.700" starttime="20201223 12:18:43.699"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:43.700" starttime="20201223 12:18:43.613"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelTitle}</arg>
+<arg>${YouAreNow_ConnectedWith}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:43.734" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelTitle")'.</msg>
+<status status="PASS" endtime="20201223 12:18:43.734" starttime="20201223 12:18:43.701"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:43.735" starttime="20201223 12:18:43.701"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:43.793" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelTitle")' text is 'You are now connected with' </msg>
+<msg timestamp="20201223 12:18:43.793" level="INFO">${actual} = You are now connected with</msg>
+<status status="PASS" endtime="20201223 12:18:43.793" starttime="20201223 12:18:43.735"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:43.794" starttime="20201223 12:18:43.793"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:43.794" level="INFO">Expected 'You are now connected with' and Actual 'You are now connected with' result</msg>
+<status status="PASS" endtime="20201223 12:18:43.795" starttime="20201223 12:18:43.794"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:43.795" starttime="20201223 12:18:43.700"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${imageProfile}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:43.896" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@resource-id,'imageProfile')]'.</msg>
+<status status="PASS" endtime="20201223 12:18:43.897" starttime="20201223 12:18:43.795"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${labelName}</arg>
+</arguments>
+<assign>
+<var>${Name}</var>
+</assign>
+<msg timestamp="20201223 12:18:43.950" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelName")' text is 'Emma Eve' </msg>
+<msg timestamp="20201223 12:18:43.950" level="INFO">${Name} = Emma Eve</msg>
+<status status="PASS" endtime="20201223 12:18:43.950" starttime="20201223 12:18:43.897"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelName}</arg>
+<arg>${Name}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:43.981" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelName")'.</msg>
+<status status="PASS" endtime="20201223 12:18:43.982" starttime="20201223 12:18:43.952"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:43.982" starttime="20201223 12:18:43.951"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:44.043" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelName")' text is 'Emma Eve' </msg>
+<msg timestamp="20201223 12:18:44.044" level="INFO">${actual} = Emma Eve</msg>
+<status status="PASS" endtime="20201223 12:18:44.044" starttime="20201223 12:18:43.982"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:44.045" starttime="20201223 12:18:44.044"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.046" level="INFO">Expected 'Emma Eve' and Actual 'Emma Eve' result</msg>
+<status status="PASS" endtime="20201223 12:18:44.046" starttime="20201223 12:18:44.046"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.047" starttime="20201223 12:18:43.950"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelDescChooseNumber}</arg>
+<arg>${Choose_ANumberToLogin}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.080" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelDescChooseNumber")'.</msg>
+<status status="PASS" endtime="20201223 12:18:44.081" starttime="20201223 12:18:44.048"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.081" starttime="20201223 12:18:44.047"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:44.151" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/labelDescChooseNumber")' text is 'Choose a number to login' </msg>
+<msg timestamp="20201223 12:18:44.151" level="INFO">${actual} = Choose a number to login</msg>
+<status status="PASS" endtime="20201223 12:18:44.151" starttime="20201223 12:18:44.081"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:44.152" starttime="20201223 12:18:44.151"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.153" level="INFO">Expected 'Choose a number to login' and Actual 'Choose a number to login' result</msg>
+<status status="PASS" endtime="20201223 12:18:44.153" starttime="20201223 12:18:44.152"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.153" starttime="20201223 12:18:44.047"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${lableAddphonenumber}</arg>
+<arg>${Add_PhoneNumber}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.187" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/buttonAddPhoneNumber")'.</msg>
+<status status="PASS" endtime="20201223 12:18:44.188" starttime="20201223 12:18:44.154"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.188" starttime="20201223 12:18:44.154"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:44.242" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/buttonAddPhoneNumber")' text is 'Add phone number' </msg>
+<msg timestamp="20201223 12:18:44.242" level="INFO">${actual} = Add phone number</msg>
+<status status="PASS" endtime="20201223 12:18:44.242" starttime="20201223 12:18:44.188"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:44.243" starttime="20201223 12:18:44.243"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.244" level="INFO">Expected 'Add phone number' and Actual 'Add phone number' result</msg>
+<status status="PASS" endtime="20201223 12:18:44.244" starttime="20201223 12:18:44.244"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.244" starttime="20201223 12:18:44.153"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelLogoutfromthisaccount}</arg>
+<arg>${Logout_FromThisAccount}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.276" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/buttonLogout")'.</msg>
+<status status="PASS" endtime="20201223 12:18:44.276" starttime="20201223 12:18:44.246"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.277" starttime="20201223 12:18:44.246"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:18:44.329" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/buttonLogout")' text is 'Logout from this account' </msg>
+<msg timestamp="20201223 12:18:44.329" level="INFO">${actual} = Logout from this account</msg>
+<status status="PASS" endtime="20201223 12:18:44.329" starttime="20201223 12:18:44.277"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:44.330" starttime="20201223 12:18:44.330"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.331" level="INFO">Expected 'Logout from this account' and Actual 'Logout from this account' result</msg>
+<status status="PASS" endtime="20201223 12:18:44.331" starttime="20201223 12:18:44.331"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.331" starttime="20201223 12:18:44.244"></status>
+</kw>
+<kw name="Verify Capture ScreenShot" library="common">
+<kw name="Get Variable Value" library="BuiltIn">
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${0}</arg>
+</arguments>
+<assign>
+<var>${screenshot_index}</var>
+</assign>
+<msg timestamp="20201223 12:18:44.332" level="INFO">${screenshot_index} = 1</msg>
+<status status="PASS" endtime="20201223 12:18:44.332" starttime="20201223 12:18:44.332"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${screenshot_index.__add__(1)}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.333" level="INFO">${screenshot_index} = 2</msg>
+<status status="PASS" endtime="20201223 12:18:44.333" starttime="20201223 12:18:44.332"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${time}=</arg>
+<arg>Evaluate</arg>
+<arg>str(time.time())</arg>
+<arg>time</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:44.333" starttime="20201223 12:18:44.333"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>Verify_${TEST NAME}_${screenshot_index}_${ar_Lag}_${ar_OS}.png</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.702" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_2_EN_Android.png"&gt;&lt;img src="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_2_EN_Android.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:18:44.702" starttime="20201223 12:18:44.334"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.702" starttime="20201223 12:18:44.331"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.702" starttime="20201223 12:18:43.564"></status>
+</kw>
+<kw name="Click Add phone number" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${lableAddphonenumber}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${lableAddphonenumber}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:44.766" starttime="20201223 12:18:44.706"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:44.766" starttime="20201223 12:18:44.705"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${lableAddphonenumber}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:44.767" level="INFO">Clicking element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/buttonAddPhoneNumber")'.</msg>
+<status status="PASS" endtime="20201223 12:18:46.289" starttime="20201223 12:18:44.766"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:46.289" starttime="20201223 12:18:44.703"></status>
+</kw>
+<kw name="Enter phone Number" library="LoginKeyword">
+<arguments>
+<arg>${mobileNumberPre}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${txt_phone_number}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${txt_phone_number}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:46.377" starttime="20201223 12:18:46.291"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:46.377" starttime="20201223 12:18:46.291"></status>
+</kw>
+<kw name="Check And Clean Phone Number" library="LoginKeyword">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${img_deleteNumber}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${img_deleteNumber}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201223 12:18:51.842" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:18:51.842" starttime="20201223 12:18:51.538"></status>
+</kw>
+<msg timestamp="20201223 12:18:51.843" level="FAIL">Element 'xpath=//android.widget.ImageView[contains(@resource-id,'btnClearPhoneNumber')]' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20201223 12:18:51.843" starttime="20201223 12:18:46.379"></status>
+</kw>
+<msg timestamp="20201223 12:18:51.843" level="INFO">${statusKeyword} = False</msg>
+<status status="PASS" endtime="20201223 12:18:51.843" starttime="20201223 12:18:46.377"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${img_deleteNumber}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:51.843" starttime="20201223 12:18:51.843"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:51.844" starttime="20201223 12:18:46.377"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_phone_number}</arg>
+<arg>${phone_number}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:51.844" level="INFO">Typing text '080-563-7358' into text field 'xpath=//android.widget.EditText[contains(@resource-id,'editTextPhoneNumber')]'</msg>
+<status status="PASS" endtime="20201223 12:18:52.515" starttime="20201223 12:18:51.844"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:52.515" starttime="20201223 12:18:46.290"></status>
+</kw>
+<kw name="Click Request OTP code via SMS" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_otp}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_otp}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:18:53.039" starttime="20201223 12:18:52.517"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:18:53.040" starttime="20201223 12:18:52.516"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_otp}</arg>
+</arguments>
+<msg timestamp="20201223 12:18:53.040" level="INFO">Clicking element 'android=UiSelector().text("Request OTP code via SMS")'.</msg>
+<status status="PASS" endtime="20201223 12:18:55.921" starttime="20201223 12:18:53.040"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ar_ntype}' == '${Post-paid}'</arg>
+<arg>Open App ChompSMS Post</arg>
+<arg>ELSE IF</arg>
+<arg>'${ar_ntype}' == '${Pre-paid}'</arg>
+<arg>Open App ChompSMS Pre</arg>
+</arguments>
+<kw name="Open App ChompSMS Pre" library="common">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>http://localhost:4725/wd/hub</arg>
+<arg>alias=MyApp2</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=${PLATFORM_V_SMS2}</arg>
+<arg>deviceName=${DEVICE_NAME_SMS2}</arg>
+<arg>appPackage=${APP_PACKAGE_SMS}</arg>
+<arg>appActivity=${APP_ACTIVITY_SMS}</arg>
+<arg>udid=${UDID_SMS2}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:08.036" starttime="20201223 12:18:55.923"></status>
+</kw>
+<kw name="Get OTP with phone number" library="common">
+<kw name="Click Start Using ChompSMS" library="common">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201223 12:19:10.040" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20201223 12:19:10.040" starttime="20201223 12:19:08.037"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_start_button}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_start_button}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:10.280" starttime="20201223 12:19:10.041"></status>
+</kw>
+<msg timestamp="20201223 12:19:10.280" level="INFO">${statusKeyword} = True</msg>
+<status status="PASS" endtime="20201223 12:19:10.280" starttime="20201223 12:19:10.041"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${btn_start_button}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_start_button}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:10.281" level="INFO">Clicking element 'xpath=//android.widget.Button[contains(@resource-id,'start_button')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:10.455" starttime="20201223 12:19:10.281"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:10.455" starttime="20201223 12:19:10.280"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:10.456" starttime="20201223 12:19:08.037"></status>
+</kw>
+<kw name="Open message dtac" library="common">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${label_dtac}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${label_dtac}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:12.048" starttime="20201223 12:19:10.457"></status>
+</kw>
+<msg timestamp="20201223 12:19:12.048" level="INFO">${statusKeyword} = True</msg>
+<status status="PASS" endtime="20201223 12:19:12.048" starttime="20201223 12:19:10.456"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${label_dtac}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${label_dtac}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:12.050" level="INFO">Clicking element 'android=UiSelector().text("dtac")'.</msg>
+<status status="PASS" endtime="20201223 12:19:14.190" starttime="20201223 12:19:12.049"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:14.190" starttime="20201223 12:19:12.049"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:14.191" starttime="20201223 12:19:10.456"></status>
+</kw>
+<kw name="Get OTP by SMS" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${lable_messagefield}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${lable_messagefield}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:14.537" starttime="20201223 12:19:14.192"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:14.537" starttime="20201223 12:19:14.192"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${lable_messagefield}</arg>
+</arguments>
+<assign>
+<var>${pin_otp}</var>
+</assign>
+<msg timestamp="20201223 12:19:14.917" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'message_field')]' text is 'Your OTP is  1303. It will valid for 15 minutes. Will expire at 2020-12-23 12:33' </msg>
+<msg timestamp="20201223 12:19:14.918" level="INFO">${pin_otp} = Your OTP is  1303. It will valid for 15 minutes. Will expire at 2020-12-23 12:33</msg>
+<status status="PASS" endtime="20201223 12:19:14.918" starttime="20201223 12:19:14.538"></status>
+</kw>
+<kw name="Get Regexp Matches" library="String">
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<arguments>
+<arg>${pin_otp}</arg>
+<arg>${Regexp}</arg>
+</arguments>
+<assign>
+<var>${ar_OTP}</var>
+</assign>
+<msg timestamp="20201223 12:19:14.919" level="INFO">${ar_OTP} = [u'1303', u'2020']</msg>
+<status status="PASS" endtime="20201223 12:19:14.919" starttime="20201223 12:19:14.918"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${ar_OTP[0]}</arg>
+</arguments>
+<assign>
+<var>${OTP}</var>
+</assign>
+<msg timestamp="20201223 12:19:14.920" level="INFO">${ar_OTP[0]} = 1303</msg>
+<msg timestamp="20201223 12:19:14.920" level="INFO">${OTP} = None</msg>
+<status status="PASS" endtime="20201223 12:19:14.920" starttime="20201223 12:19:14.919"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${ar_OTP[0]}</arg>
+<arg>0</arg>
+<arg>-3</arg>
+</arguments>
+<assign>
+<var>${sp_1}</var>
+</assign>
+<msg timestamp="20201223 12:19:14.921" level="INFO">${sp_1} = 1</msg>
+<status status="PASS" endtime="20201223 12:19:14.921" starttime="20201223 12:19:14.920"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${ar_OTP[0]}</arg>
+<arg>1</arg>
+<arg>-2</arg>
+</arguments>
+<assign>
+<var>${sp_2}</var>
+</assign>
+<msg timestamp="20201223 12:19:14.921" level="INFO">${sp_2} = 3</msg>
+<status status="PASS" endtime="20201223 12:19:14.921" starttime="20201223 12:19:14.921"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${ar_OTP[0]}</arg>
+<arg>2</arg>
+<arg>-1</arg>
+</arguments>
+<assign>
+<var>${sp_3}</var>
+</assign>
+<msg timestamp="20201223 12:19:14.922" level="INFO">${sp_3} = 0</msg>
+<status status="PASS" endtime="20201223 12:19:14.922" starttime="20201223 12:19:14.922"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${ar_OTP[0]}</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${sp_4}</var>
+</assign>
+<msg timestamp="20201223 12:19:14.922" level="INFO">${sp_4} = 3</msg>
+<status status="PASS" endtime="20201223 12:19:14.923" starttime="20201223 12:19:14.922"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sp_1}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:14.923" level="INFO">${sp_1} = 1</msg>
+<status status="PASS" endtime="20201223 12:19:14.923" starttime="20201223 12:19:14.923"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sp_2}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:14.924" level="INFO">${sp_2} = 3</msg>
+<status status="PASS" endtime="20201223 12:19:14.924" starttime="20201223 12:19:14.924"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sp_3}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:14.925" level="INFO">${sp_3} = 0</msg>
+<status status="PASS" endtime="20201223 12:19:14.925" starttime="20201223 12:19:14.924"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${sp_4}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:14.925" level="INFO">${sp_4} = 3</msg>
+<status status="PASS" endtime="20201223 12:19:14.925" starttime="20201223 12:19:14.925"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:14.925" starttime="20201223 12:19:14.191"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:14.925" starttime="20201223 12:19:08.036"></status>
+</kw>
+<kw name="Delete message dtac" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_back}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_back}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:15.274" starttime="20201223 12:19:14.926"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:15.274" starttime="20201223 12:19:14.926"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_back}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:15.275" level="INFO">Clicking element 'xpath=//android.widget.ImageView[contains(@resource-id,'up_image')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:15.624" starttime="20201223 12:19:15.275"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_Options}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_Options}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:16.442" starttime="20201223 12:19:15.625"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:16.442" starttime="20201223 12:19:15.624"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Options}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:16.443" level="INFO">Clicking element 'android=new UiSelector().className("android.widget.ImageButton").index(1)'.</msg>
+<status status="PASS" endtime="20201223 12:19:17.621" starttime="20201223 12:19:16.443"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${label_Delete}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:17.622" level="INFO">Clicking element 'android=UiSelector().text("Delete All")'.</msg>
+<status status="PASS" endtime="20201223 12:19:18.508" starttime="20201223 12:19:17.622"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_DELETE}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:18.509" level="INFO">Clicking element 'android=UiSelector().text("DELETE")'.</msg>
+<status status="PASS" endtime="20201223 12:19:19.845" starttime="20201223 12:19:18.508"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:19.845" starttime="20201223 12:19:14.926"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20201223 12:19:20.046" starttime="20201223 12:19:19.846"></status>
+</kw>
+<kw name="Switch to dtac" library="common">
+<kw name="Switch Application" library="AppiumLibrary">
+<doc>Switches the active application by index or alias.</doc>
+<arguments>
+<arg>${appium1}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:20.047" starttime="20201223 12:19:20.047"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:20.047" starttime="20201223 12:19:20.046"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:20.047" starttime="20201223 12:18:55.923"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:20.047" starttime="20201223 12:18:55.922"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:20.048" starttime="20201223 12:18:52.516"></status>
+</kw>
+<kw name="Enter OTP with phone number" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${txt_otp_fieid_1}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${txt_otp_fieid_1}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:20.095" starttime="20201223 12:19:20.049"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:20.096" starttime="20201223 12:19:20.048"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Lbl_phonenumber}</arg>
+</arguments>
+<assign>
+<var>${getPhoneNume}</var>
+</assign>
+<msg timestamp="20201223 12:19:20.167" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'labelTitle')]' text is '080-563-7358' </msg>
+<msg timestamp="20201223 12:19:20.167" level="INFO">${getPhoneNume} = 080-563-7358</msg>
+<status status="PASS" endtime="20201223 12:19:20.167" starttime="20201223 12:19:20.096"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${getPhoneNume}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:20.168" level="INFO">${getPhoneNume} = 080-563-7358</msg>
+<status status="PASS" endtime="20201223 12:19:20.168" starttime="20201223 12:19:20.168"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_otp_fieid_1}</arg>
+<arg>${sp_1}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:20.169" level="INFO">Typing text '1' into text field 'android=new UiSelector().className("android.widget.EditText").index(0)'</msg>
+<status status="PASS" endtime="20201223 12:19:20.236" starttime="20201223 12:19:20.168"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_otp_fieid_2}</arg>
+<arg>${sp_2}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:20.237" level="INFO">Typing text '3' into text field 'android=new UiSelector().className("android.widget.EditText").index(1)'</msg>
+<status status="PASS" endtime="20201223 12:19:20.837" starttime="20201223 12:19:20.237"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_otp_fieid_3}</arg>
+<arg>${sp_3}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:20.839" level="INFO">Typing text '0' into text field 'android=new UiSelector().className("android.widget.EditText").index(2)'</msg>
+<status status="PASS" endtime="20201223 12:19:21.422" starttime="20201223 12:19:20.838"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_otp_fieid_4}</arg>
+<arg>${sp_4}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:21.423" level="INFO">Typing text '3' into text field 'android=new UiSelector().className("android.widget.EditText").index(3)'</msg>
+<status status="PASS" endtime="20201223 12:19:22.017" starttime="20201223 12:19:21.422"></status>
+</kw>
+<kw name="Verify Capture ScreenShot" library="common">
+<kw name="Get Variable Value" library="BuiltIn">
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${0}</arg>
+</arguments>
+<assign>
+<var>${screenshot_index}</var>
+</assign>
+<msg timestamp="20201223 12:19:22.021" level="INFO">${screenshot_index} = 2</msg>
+<status status="PASS" endtime="20201223 12:19:22.021" starttime="20201223 12:19:22.019"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${screenshot_index.__add__(1)}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:22.023" level="INFO">${screenshot_index} = 3</msg>
+<status status="PASS" endtime="20201223 12:19:22.023" starttime="20201223 12:19:22.022"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${time}=</arg>
+<arg>Evaluate</arg>
+<arg>str(time.time())</arg>
+<arg>time</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:22.024" starttime="20201223 12:19:22.023"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>Verify_${TEST NAME}_${screenshot_index}_${ar_Lag}_${ar_OS}.png</arg>
+</arguments>
+<msg timestamp="20201223 12:19:22.605" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_3_EN_Android.png"&gt;&lt;img src="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_3_EN_Android.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:19:22.606" starttime="20201223 12:19:22.024"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:22.606" starttime="20201223 12:19:22.017"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:22.606" starttime="20201223 12:19:20.048"></status>
+</kw>
+<kw name="Verify main Page Case Add New Number" library="LoginKeyword">
+<kw name="Check Your Coins here First time" library="LoginKeyword">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201223 12:19:23.608" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20201223 12:19:23.608" starttime="20201223 12:19:22.608"></status>
+</kw>
+<kw name="Check header app" library="LoginKeyword">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201223 12:19:25.610" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20201223 12:19:25.610" starttime="20201223 12:19:23.609"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${label_Package}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${label_Package}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:25.618" level="FAIL">Variable '${label_Package}' not found.</msg>
+<status status="FAIL" endtime="20201223 12:19:25.618" starttime="20201223 12:19:25.611"></status>
+</kw>
+<msg timestamp="20201223 12:19:25.619" level="INFO">${statusKeyword} = False</msg>
+<status status="PASS" endtime="20201223 12:19:25.619" starttime="20201223 12:19:25.610"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${MenuHome}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:25.619" starttime="20201223 12:19:25.619"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${label_Usage}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${label_Usage}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:25.625" level="FAIL">Variable '${label_Usage}' not found.</msg>
+<status status="FAIL" endtime="20201223 12:19:25.626" starttime="20201223 12:19:25.620"></status>
+</kw>
+<msg timestamp="20201223 12:19:25.626" level="INFO">${statusKeyword} = False</msg>
+<status status="PASS" endtime="20201223 12:19:25.626" starttime="20201223 12:19:25.620"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${MenuHome}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:25.627" starttime="20201223 12:19:25.626"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:25.628" starttime="20201223 12:19:23.609"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201223 12:19:26.628" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20201223 12:19:26.629" starttime="20201223 12:19:25.628"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_Skip}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_Skip}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:26.757" starttime="20201223 12:19:26.629"></status>
+</kw>
+<msg timestamp="20201223 12:19:26.757" level="INFO">${statusKeyword} = True</msg>
+<status status="PASS" endtime="20201223 12:19:26.757" starttime="20201223 12:19:26.629"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${btn_Skip}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Skip}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:26.759" level="INFO">Clicking element 'xpath=//android.widget.TextView[contains(@resource-id,'buttonSkip')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:26.912" starttime="20201223 12:19:26.759"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:26.912" starttime="20201223 12:19:26.758"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201223 12:19:31.913" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20201223 12:19:31.913" starttime="20201223 12:19:26.912"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_closePopup}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_closePopup}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201223 12:19:37.434" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:19:37.434" starttime="20201223 12:19:37.049"></status>
+</kw>
+<msg timestamp="20201223 12:19:37.435" level="FAIL">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/collapse_button")' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20201223 12:19:37.435" starttime="20201223 12:19:31.914"></status>
+</kw>
+<msg timestamp="20201223 12:19:37.435" level="INFO">${statusKeyword} = False</msg>
+<status status="PASS" endtime="20201223 12:19:37.435" starttime="20201223 12:19:31.914"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${btn_closePopup}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:37.435" starttime="20201223 12:19:37.435"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:37.435" starttime="20201223 12:19:22.607"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>40s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${labelGreeting}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${labelGreeting}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:37.569" starttime="20201223 12:19:37.436"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:37.569" starttime="20201223 12:19:37.436"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20201223 12:19:39.571" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20201223 12:19:39.571" starttime="20201223 12:19:37.570"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${image_Profile}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:39.776" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@resource-id,'imageProfile')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:39.776" starttime="20201223 12:19:39.571"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${iconBell}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:40.048" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@resource-id,'ivNotiDtacLogo')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:40.048" starttime="20201223 12:19:39.777"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${labelGreeting}</arg>
+</arguments>
+<assign>
+<var>${getGreeting}</var>
+</assign>
+<msg timestamp="20201223 12:19:40.325" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'labelGreeting')]' text is 'welcome' </msg>
+<msg timestamp="20201223 12:19:40.326" level="INFO">${getGreeting} = welcome</msg>
+<status status="PASS" endtime="20201223 12:19:40.326" starttime="20201223 12:19:40.048"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelGreeting}</arg>
+<arg>${getGreeting}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:40.574" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'labelGreeting')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:40.575" starttime="20201223 12:19:40.328"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:40.575" starttime="20201223 12:19:40.327"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:40.782" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'labelGreeting')]' text is 'welcome' </msg>
+<msg timestamp="20201223 12:19:40.782" level="INFO">${actual} = welcome</msg>
+<status status="PASS" endtime="20201223 12:19:40.782" starttime="20201223 12:19:40.575"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:40.783" starttime="20201223 12:19:40.782"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:40.783" level="INFO">Expected 'welcome' and Actual 'welcome' result</msg>
+<status status="PASS" endtime="20201223 12:19:40.783" starttime="20201223 12:19:40.783"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:40.783" starttime="20201223 12:19:40.326"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${labelPhoneNumber}</arg>
+</arguments>
+<assign>
+<var>${GetPhoneNum_Home}</var>
+</assign>
+<msg timestamp="20201223 12:19:40.951" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'labelPhoneNumber')]' text is '080-563-7358' </msg>
+<msg timestamp="20201223 12:19:40.951" level="INFO">${GetPhoneNum_Home} = 080-563-7358</msg>
+<status status="PASS" endtime="20201223 12:19:40.951" starttime="20201223 12:19:40.783"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${getPhoneNume}</arg>
+<arg>${GetPhoneNum_Home}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:40.952" starttime="20201223 12:19:40.952"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelPhoneType}</arg>
+<arg>${ar_ntype}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:41.204" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'tvAou')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:41.204" starttime="20201223 12:19:40.953"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:41.204" starttime="20201223 12:19:40.953"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:41.355" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'tvAou')]' text is 'Prepaid' </msg>
+<msg timestamp="20201223 12:19:41.356" level="INFO">${actual} = Prepaid</msg>
+<status status="PASS" endtime="20201223 12:19:41.356" starttime="20201223 12:19:41.205"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:41.356" starttime="20201223 12:19:41.356"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:41.357" level="INFO">Expected 'Prepaid' and Actual 'Prepaid' result</msg>
+<status status="PASS" endtime="20201223 12:19:41.357" starttime="20201223 12:19:41.357"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:41.357" starttime="20201223 12:19:40.952"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelTileCoin}</arg>
+<arg>${My_Coins}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:41.538" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'labelTitleCoin')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:41.539" starttime="20201223 12:19:41.358"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:41.539" starttime="20201223 12:19:41.358"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:41.676" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'labelTitleCoin')]' text is 'My Coins' </msg>
+<msg timestamp="20201223 12:19:41.676" level="INFO">${actual} = My Coins</msg>
+<status status="PASS" endtime="20201223 12:19:41.677" starttime="20201223 12:19:41.539"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:41.677" starttime="20201223 12:19:41.677"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:41.678" level="INFO">Expected 'My Coins' and Actual 'My Coins' result</msg>
+<status status="PASS" endtime="20201223 12:19:41.678" starttime="20201223 12:19:41.677"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:41.678" starttime="20201223 12:19:41.357"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${labelValueCoin}</arg>
+</arguments>
+<assign>
+<var>${ValueCoin}</var>
+</assign>
+<msg timestamp="20201223 12:19:41.827" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'labelValueCoin')]' text is '49' </msg>
+<msg timestamp="20201223 12:19:41.828" level="INFO">${ValueCoin} = 49</msg>
+<status status="PASS" endtime="20201223 12:19:41.828" starttime="20201223 12:19:41.678"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${labelValueCoin}</arg>
+<arg>${ValueCoin}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:41.998" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'labelValueCoin')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:41.998" starttime="20201223 12:19:41.829"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:41.998" starttime="20201223 12:19:41.829"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:42.256" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'labelValueCoin')]' text is '49' </msg>
+<msg timestamp="20201223 12:19:42.257" level="INFO">${actual} = 49</msg>
+<status status="PASS" endtime="20201223 12:19:42.257" starttime="20201223 12:19:41.999"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:42.258" starttime="20201223 12:19:42.257"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.258" level="INFO">Expected '49' and Actual '49' result</msg>
+<status status="PASS" endtime="20201223 12:19:42.259" starttime="20201223 12:19:42.258"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.259" starttime="20201223 12:19:41.828"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${imageCoin}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.507" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@resource-id,'imageCoin')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:42.507" starttime="20201223 12:19:42.259"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${MenuHome}</arg>
+<arg>${Home-menu}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.556" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Home")'.</msg>
+<status status="PASS" endtime="20201223 12:19:42.556" starttime="20201223 12:19:42.508"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.556" starttime="20201223 12:19:42.508"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:42.640" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Home")' text is 'Home' </msg>
+<msg timestamp="20201223 12:19:42.641" level="INFO">${actual} = Home</msg>
+<status status="PASS" endtime="20201223 12:19:42.641" starttime="20201223 12:19:42.557"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:42.641" starttime="20201223 12:19:42.641"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.642" level="INFO">Expected 'Home' and Actual 'Home' result</msg>
+<status status="PASS" endtime="20201223 12:19:42.642" starttime="20201223 12:19:42.642"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.642" starttime="20201223 12:19:42.507"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${MenuPackage}</arg>
+<arg>${Package-menu}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.696" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Package")'.</msg>
+<status status="PASS" endtime="20201223 12:19:42.696" starttime="20201223 12:19:42.643"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.696" starttime="20201223 12:19:42.643"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:42.772" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Package")' text is 'Package' </msg>
+<msg timestamp="20201223 12:19:42.772" level="INFO">${actual} = Package</msg>
+<status status="PASS" endtime="20201223 12:19:42.772" starttime="20201223 12:19:42.696"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:42.773" starttime="20201223 12:19:42.772"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.774" level="INFO">Expected 'Package' and Actual 'Package' result</msg>
+<status status="PASS" endtime="20201223 12:19:42.774" starttime="20201223 12:19:42.774"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.774" starttime="20201223 12:19:42.642"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${MenuReward}</arg>
+<arg>${Reward-menu}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.824" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Reward")'.</msg>
+<status status="PASS" endtime="20201223 12:19:42.824" starttime="20201223 12:19:42.775"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.825" starttime="20201223 12:19:42.775"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:42.895" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Reward")' text is 'Reward' </msg>
+<msg timestamp="20201223 12:19:42.896" level="INFO">${actual} = Reward</msg>
+<status status="PASS" endtime="20201223 12:19:42.896" starttime="20201223 12:19:42.825"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:42.897" starttime="20201223 12:19:42.896"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.898" level="INFO">Expected 'Reward' and Actual 'Reward' result</msg>
+<status status="PASS" endtime="20201223 12:19:42.898" starttime="20201223 12:19:42.897"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.898" starttime="20201223 12:19:42.774"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${MenuUsage}</arg>
+<arg>${Usage-menu}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:42.947" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Usage")'.</msg>
+<status status="PASS" endtime="20201223 12:19:42.948" starttime="20201223 12:19:42.899"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:42.948" starttime="20201223 12:19:42.898"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:43.022" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Usage")' text is 'Usage' </msg>
+<msg timestamp="20201223 12:19:43.023" level="INFO">${actual} = Usage</msg>
+<status status="PASS" endtime="20201223 12:19:43.023" starttime="20201223 12:19:42.948"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:43.024" starttime="20201223 12:19:43.023"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:43.024" level="INFO">Expected 'Usage' and Actual 'Usage' result</msg>
+<status status="PASS" endtime="20201223 12:19:43.024" starttime="20201223 12:19:43.024"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:43.024" starttime="20201223 12:19:42.898"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${MenuOther}</arg>
+<arg>${Other-menu}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:43.076" level="INFO">Current page contains element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Other")'.</msg>
+<status status="PASS" endtime="20201223 12:19:43.076" starttime="20201223 12:19:43.026"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:43.076" starttime="20201223 12:19:43.025"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201223 12:19:43.154" level="INFO">Element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Other")' text is 'Other' </msg>
+<msg timestamp="20201223 12:19:43.154" level="INFO">${actual} = Other</msg>
+<status status="PASS" endtime="20201223 12:19:43.154" starttime="20201223 12:19:43.076"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:43.155" starttime="20201223 12:19:43.155"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201223 12:19:43.156" level="INFO">Expected 'Other' and Actual 'Other' result</msg>
+<status status="PASS" endtime="20201223 12:19:43.156" starttime="20201223 12:19:43.156"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:43.156" starttime="20201223 12:19:43.025"></status>
+</kw>
+<kw name="Verify Capture ScreenShot" library="common">
+<kw name="Get Variable Value" library="BuiltIn">
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${0}</arg>
+</arguments>
+<assign>
+<var>${screenshot_index}</var>
+</assign>
+<msg timestamp="20201223 12:19:43.157" level="INFO">${screenshot_index} = 3</msg>
+<status status="PASS" endtime="20201223 12:19:43.157" starttime="20201223 12:19:43.157"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${screenshot_index.__add__(1)}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:43.158" level="INFO">${screenshot_index} = 4</msg>
+<status status="PASS" endtime="20201223 12:19:43.158" starttime="20201223 12:19:43.157"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${time}=</arg>
+<arg>Evaluate</arg>
+<arg>str(time.time())</arg>
+<arg>time</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:43.158" starttime="20201223 12:19:43.158"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>Verify_${TEST NAME}_${screenshot_index}_${ar_Lag}_${ar_OS}.png</arg>
+</arguments>
+<msg timestamp="20201223 12:19:43.532" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_4_EN_Android.png"&gt;&lt;img src="Verify_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_4_EN_Android.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:19:43.532" starttime="20201223 12:19:43.158"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:43.533" starttime="20201223 12:19:43.156"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:43.533" starttime="20201223 12:19:22.607"></status>
+</kw>
+<kw name="Close All Apps (this)" library="common">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201223 12:19:46.535" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20201223 12:19:46.536" starttime="20201223 12:19:43.534"></status>
+</kw>
+<kw name="Capture ScreenShot" library="common">
+<kw name="Get Variable Value" library="BuiltIn">
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${0}</arg>
+</arguments>
+<assign>
+<var>${screenshot_index}</var>
+</assign>
+<msg timestamp="20201223 12:19:46.538" level="INFO">${screenshot_index} = 4</msg>
+<status status="PASS" endtime="20201223 12:19:46.538" starttime="20201223 12:19:46.537"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${screenshot_index}</arg>
+<arg>${screenshot_index.__add__(1)}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:46.539" level="INFO">${screenshot_index} = 5</msg>
+<status status="PASS" endtime="20201223 12:19:46.539" starttime="20201223 12:19:46.538"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${time}=</arg>
+<arg>Evaluate</arg>
+<arg>str(time.time())</arg>
+<arg>time</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:46.540" starttime="20201223 12:19:46.540"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>screenshot_${TEST NAME}_${screenshot_index}_${ar_Lag}_${ar_OS}.png</arg>
+</arguments>
+<msg timestamp="20201223 12:19:46.974" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_5_EN_Android.png"&gt;&lt;img src="screenshot_%5BF3_Login_0103%5DLogin%20Facebook%20but%20not%20bind%20Permission%20Dtac%20-%20Add%20New%20Number_Prepaid_5_EN_Android.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201223 12:19:46.974" starttime="20201223 12:19:46.541"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:46.974" starttime="20201223 12:19:46.536"></status>
+</kw>
+<kw name="Logout from this device" library="common">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MenuOther}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:46.975" level="INFO">Clicking element 'android=new UiSelector().resourceId("th.co.crie.tron2.android:id/title").text("Other")'.</msg>
+<status status="PASS" endtime="20201223 12:19:48.571" starttime="20201223 12:19:46.975"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>android=new UiSelector().text("dtac Services")</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>android=new UiSelector().text("dtac Services")</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:48.630" starttime="20201223 12:19:48.572"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:48.631" starttime="20201223 12:19:48.571"></status>
+</kw>
+<kw name="Swipe Up" library="common">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20201223 12:19:49.634" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20201223 12:19:49.634" starttime="20201223 12:19:48.631"></status>
+</kw>
+<kw name="Get Element Size" library="AppiumLibrary">
+<doc>Get element size</doc>
+<arguments>
+<arg>${ScrollView}</arg>
+</arguments>
+<assign>
+<var>${element_size}</var>
+</assign>
+<msg timestamp="20201223 12:19:49.851" level="INFO">Element 'xpath=//android.widget.ScrollView[contains(@resource-id,'rootList')]' size: {'width': 1080, 'height': 1432} </msg>
+<msg timestamp="20201223 12:19:49.851" level="INFO">${element_size} = {'width': 1080, 'height': 1432}</msg>
+<status status="PASS" endtime="20201223 12:19:49.852" starttime="20201223 12:19:49.635"></status>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<doc>Get element location</doc>
+<arguments>
+<arg>${ScrollView}</arg>
+</arguments>
+<assign>
+<var>${element_location}</var>
+</assign>
+<msg timestamp="20201223 12:19:50.111" level="INFO">Element 'xpath=//android.widget.ScrollView[contains(@resource-id,'rootList')]' location: {'y': 210.0, 'x': 0.0} </msg>
+<msg timestamp="20201223 12:19:50.111" level="INFO">${element_location} = {'y': 210.0, 'x': 0.0}</msg>
+<status status="PASS" endtime="20201223 12:19:50.111" starttime="20201223 12:19:49.852"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+</arguments>
+<assign>
+<var>${start_x}</var>
+</assign>
+<msg timestamp="20201223 12:19:50.112" level="INFO">${start_x} = 540.0</msg>
+<status status="PASS" endtime="20201223 12:19:50.112" starttime="20201223 12:19:50.112"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${element_location['y']} + (${element_size['height']} * 0.7)</arg>
+</arguments>
+<assign>
+<var>${start_y}</var>
+</assign>
+<msg timestamp="20201223 12:19:50.113" level="INFO">${start_y} = 1212.4</msg>
+<status status="PASS" endtime="20201223 12:19:50.113" starttime="20201223 12:19:50.113"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${element_location['x']} + (${element_size['width']} * 0.5)</arg>
+</arguments>
+<assign>
+<var>${end_x}</var>
+</assign>
+<msg timestamp="20201223 12:19:50.114" level="INFO">${end_x} = 540.0</msg>
+<status status="PASS" endtime="20201223 12:19:50.115" starttime="20201223 12:19:50.114"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${element_location['y']} + (${element_size['height']} * 0.3)</arg>
+</arguments>
+<assign>
+<var>${end_y}</var>
+</assign>
+<msg timestamp="20201223 12:19:50.116" level="INFO">${end_y} = 639.6</msg>
+<status status="PASS" endtime="20201223 12:19:50.116" starttime="20201223 12:19:50.115"></status>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<arguments>
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${end_x}</arg>
+<arg>${end_y}</arg>
+<arg>500</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:51.225" starttime="20201223 12:19:50.116"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20201223 12:19:52.227" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20201223 12:19:52.228" starttime="20201223 12:19:51.226"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:52.228" starttime="20201223 12:19:48.631"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_Logout}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_Logout}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:52.488" starttime="20201223 12:19:52.229"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:52.488" starttime="20201223 12:19:52.228"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Logout}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:52.489" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[contains(@resource-id,'btnLogout')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:52.679" starttime="20201223 12:19:52.488"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_Logoutthis}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_Logoutthis}</arg>
+</arguments>
+<status status="PASS" endtime="20201223 12:19:53.364" starttime="20201223 12:19:52.680"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:53.364" starttime="20201223 12:19:52.679"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_Logoutthis}</arg>
+</arguments>
+<msg timestamp="20201223 12:19:53.365" level="INFO">Clicking element 'xpath=//android.widget.Button[contains(@resource-id,'btnActionOne')]'.</msg>
+<status status="PASS" endtime="20201223 12:19:53.430" starttime="20201223 12:19:53.365"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:53.430" starttime="20201223 12:19:46.974"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20201223 12:19:53.717" starttime="20201223 12:19:53.430"></status>
+</kw>
+<status status="PASS" endtime="20201223 12:19:53.718" starttime="20201223 12:19:43.533"></status>
+</kw>
+<tags>
+<tag>phonePrePermission</tag>
+</tags>
+<status status="PASS" endtime="20201223 12:19:53.718" critical="yes" starttime="20201223 12:18:12.010"></status>
+</test>
+<status status="PASS" endtime="20201223 12:19:53.721" starttime="20201223 12:18:11.683"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">phonePrePermission</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login" pass="1">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
