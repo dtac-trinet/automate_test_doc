@@ -172,6 +172,35 @@ We show list of variable must inject on running test
 | ar_Lag        | Support language                                       | yes      | String     | EN                                                                           | no             |
 | ar_udid       | Specified ID of simulator in used                      | yes      | String     | # for android Nexus_5X_API_30 # for iOS 44752AA7-1E63-412E-AA80-9342438D7302 | no             |
 
+## Testcase Tag
+For iOs
+| Tag                                | Test case                                                                                                                    |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| CLIPostpaid                        | Login with Cellular Network (Postpaid)                                                                                       |
+| CLIPrepaid                         | Login with Cellular Network (Prepaid)                                                                                        |
+| phonePostpaid                      | Login with OTP (Postpaid), New Facebook Login – Add New Number (Postpaid), Old Facebook Login – Add New Number (Postpaid)    |
+| phonePrepaid                       | Login with OTP (Prepaid), New Facebook Login – Add New Number (Prepaid), Old Facebook Login – Add New Number (Prepaid)       |
+| FarmPostpaid                       | New Facebook Login – Number Paired (Postpaid), Old Facebook Login – Number Paired (Postpaid)                                 |
+| FarmPrepaid1                       | New Facebook Login – Number Paired (Prepaid), Old Facebook Login – Number Paired (Prepaid)                                   |
+
+For android
+| Tag                                | Test case                                                                                                                    |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| CLIPostpaid                        | Login with Cellular Network (Postpaid)                                                                                       |
+| CLIPrepaid                         | Login with Cellular Network (Prepaid)                                                                                        |
+| phonePostpaid                      | Login with OTP (Postpaid), New Facebook Login – Add New Number (Postpaid), Old Facebook Login – Add New Number (Postpaid)    |
+| phonePrepaid                       | Login with OTP (Prepaid), New Facebook Login – Add New Number (Prepaid), Old Facebook Login – Add New Number (Prepaid)       |
+| phonePostPermission                | Login Facebook but not bind Permission – Add New Number (Postpaid)                                                           |
+| phonePrePermission                 | Login Facebook but not bind Permission – Add New Number (Prepaid)                                                            |
+| phonePostLogout                    | Facebook is logout but remembered the account – Add New Number (Postpaid)                                                    |
+| phonePreLogout                     | Facebook is logout but remembered the account – Add New Number (Prepaid)                                                     |
+| FarmPostpaid                       | New Facebook Login – Number Paired (Postpaid), Old Facebook Login – Number Paired (Postpaid)                                 |
+| FarmPrepaid1                       | New Facebook Login – Number Paired (Prepaid), Old Facebook Login – Number Paired (Prepaid)                                   |
+| FarmPostPermission                 | Login Facebook but not bind Permission – Number Paired (Postpaid)                                                            |
+| FarmPrePermission                  | Login Facebook but not bind Permission – Number Paired (Prepaid)                                                             |
+| FarmPreLogout                      | Facebook is Logout but remembered the account – Number Paired (Prepaid)                                                      |
+| FarmPostLogout                     | Facebook is logout but remembered the account – Number Paired (Postpaid)                                                     |
+
 ## Example command test with farm test case
 move current dir to repo
 ```bash
@@ -215,4 +244,4 @@ testcase/Login-Farm.robot
 Refer to [MAINTAINER.md](MAINTAINER.md)
 
 ## License
-Source code under: copyright © 2021 onioncheck
+Source code under: copyright © 2021 onionchack
