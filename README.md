@@ -244,4 +244,4 @@ testcase/Login-Farm.robot
 Refer to [MAINTAINER.md](MAINTAINER.md)
 
 ## License
-Source code under: copyright © 2021 onionchack
+Source code under: copyright © 2021 OnionShack
