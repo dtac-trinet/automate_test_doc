@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20201220 22:45:30.832" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
+<suite source="/Users/tararatwongsansee/iOSdtacappAutomateTest/testcase/Login.robot" id="s1" name="Login">
+<test id="s1-t1" name="[F1_Login_0101]Login with Cellular Network Postpaid">
+<kw name="Open App iOS" library="common">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${ar_OS}</arg>
+<arg>platformVersion=${ar_pfversion}</arg>
+<arg>deviceName=iPhone</arg>
+<arg>udid=${ar_udid}</arg>
+<arg>app=${BUNDLE_ID}</arg>
+</arguments>
+<status status="PASS" endtime="20201220 22:45:33.834" starttime="20201220 22:45:31.030"></status>
+</kw>
+<kw name="Check Notofication First time" library="common">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_allow}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_allow}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201220 22:45:39.378" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201220 22:45:39.379" starttime="20201220 22:45:39.129"></status>
+</kw>
+<msg timestamp="20201220 22:45:39.379" level="FAIL">Element 'accessibility_id=Allow' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20201220 22:45:39.379" starttime="20201220 22:45:33.835"></status>
+</kw>
+<msg timestamp="20201220 22:45:39.379" level="INFO">${statusKeyword} = False</msg>
+<status status="PASS" endtime="20201220 22:45:39.379" starttime="20201220 22:45:33.835"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${btn_allow}</arg>
+</arguments>
+<status status="PASS" endtime="20201220 22:45:39.380" starttime="20201220 22:45:39.380"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:39.380" starttime="20201220 22:45:33.834"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${menuBata_Close}</arg>
+</arguments>
+<assign>
+<var>${statusKeyword}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${menuBata_Close}</arg>
+</arguments>
+<status status="PASS" endtime="20201220 22:45:39.812" starttime="20201220 22:45:39.381"></status>
+</kw>
+<msg timestamp="20201220 22:45:39.813" level="INFO">${statusKeyword} = True</msg>
+<status status="PASS" endtime="20201220 22:45:39.813" starttime="20201220 22:45:39.381"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${statusKeyword}' == 'True'</arg>
+<arg>Click Element</arg>
+<arg>${menuBata_Close}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${menuBata_Close}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:39.814" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="close"]'.</msg>
+<status status="PASS" endtime="20201220 22:45:40.802" starttime="20201220 22:45:39.813"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:40.802" starttime="20201220 22:45:39.813"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:40.802" starttime="20201220 22:45:31.030"></status>
+</kw>
+<kw name="Click Signin with phone number" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${btn_singin_phone_number}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${btn_singin_phone_number}</arg>
+</arguments>
+<status status="PASS" endtime="20201220 22:45:40.984" starttime="20201220 22:45:40.803"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:40.984" starttime="20201220 22:45:40.803"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_singin_phone_number}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:40.984" level="INFO">Clicking element 'accessibility_id=buttonSignInWithPhoneNumber'.</msg>
+<status status="PASS" endtime="20201220 22:45:41.650" starttime="20201220 22:45:40.984"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:41.651" starttime="20201220 22:45:40.802"></status>
+</kw>
+<kw name="Verify Case CLI Login to App Page" library="LoginKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>40s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${dtac_logo}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${dtac_logo}</arg>
+</arguments>
+<status status="PASS" endtime="20201220 22:45:41.856" starttime="20201220 22:45:41.653"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:41.856" starttime="20201220 22:45:41.652"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${dtac_logo}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:42.013" level="INFO">Current page contains element 'accessibility_id=dtac_logo'.</msg>
+<status status="PASS" endtime="20201220 22:45:42.013" starttime="20201220 22:45:41.856"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${txt_editTextPhoneNumber}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${txt_editTextPhoneNumber}</arg>
+</arguments>
+<status status="PASS" endtime="20201220 22:45:42.190" starttime="20201220 22:45:42.014"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:42.191" starttime="20201220 22:45:42.013"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${txt_editTextPhoneNumber}</arg>
+</arguments>
+<assign>
+<var>${OldNumber2}</var>
+</assign>
+<msg timestamp="20201220 22:45:42.750" level="INFO">Element 'accessibility_id=editTextPhoneNumber' text is 'xxx-xxx-xxxx' </msg>
+<msg timestamp="20201220 22:45:42.750" level="INFO">${OldNumber2} = xxx-xxx-xxxx</msg>
+<status status="PASS" endtime="20201220 22:45:42.750" starttime="20201220 22:45:42.191"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${OldNumber2}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:42.751" level="INFO">${OldNumber2} = xxx-xxx-xxxx</msg>
+<status status="PASS" endtime="20201220 22:45:42.751" starttime="20201220 22:45:42.750"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${txt_editTextPhoneNumber}</arg>
+<arg>${OldNumber2}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:42.925" level="INFO">Current page contains element 'accessibility_id=editTextPhoneNumber'.</msg>
+<status status="PASS" endtime="20201220 22:45:42.925" starttime="20201220 22:45:42.752"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:42.925" starttime="20201220 22:45:42.752"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20201220 22:45:43.349" level="INFO">Element 'accessibility_id=editTextPhoneNumber' text is 'xxx-xxx-xxxx' </msg>
+<msg timestamp="20201220 22:45:43.349" level="INFO">${actual} = xxx-xxx-xxxx</msg>
+<status status="PASS" endtime="20201220 22:45:43.349" starttime="20201220 22:45:42.925"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20201220 22:45:43.350" starttime="20201220 22:45:43.350"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Expected '${expected}' and Actual '${actual}' result</arg>
+</arguments>
+<msg timestamp="20201220 22:45:43.350" level="INFO">Expected 'xxx-xxx-xxxx' and Actual 'xxx-xxx-xxxx' result</msg>
+<status status="PASS" endtime="20201220 22:45:43.350" starttime="20201220 22:45:43.350"></status>
+</kw>
+<status status="PASS" endtime="20201220 22:45:43.350" starttime="20201220 22:45:42.751"></status>
+</kw>
+<kw name="Mobile element text should be" library="common">
+<arguments>
+<arg>${btn_Loginwiththisnumber}</arg>
+<arg>${Login_withThisNumber}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:44.790" level="INFO">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;AppiumAUT&gt;&lt;XCUIElementTypeApplication type="XCUIElementTypeApplication" name="beta" label="beta" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+          &lt;XCUIElementTypeNavigationBar type="XCUIElementTypeNavigationBar" name="My dtac Numbers" enabled="true" visible="true" x="0" y="20" width="414" height="44"&gt;
+            &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Back" label="Back" enabled="true" visible="true" x="0" y="20" width="44" height="44"/&gt;
+            &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="My dtac Numbers" name="My dtac Numbers" label="My dtac Numbers" enabled="true" visible="true" x="137" y="30" width="140" height="25"/&gt;
+          &lt;/XCUIElementTypeNavigationBar&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="64" width="414" height="672"&gt;
+                &lt;XCUIElementTypeImage type="XCUIElementTypeImage" name="dtac_logo" enabled="true" visible="false" x="165" y="98" width="84" height="49"/&gt;
+                &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="logintitle" name="labelTitle" label="logintitle" enabled="true" visible="true" x="44" y="202" width="326" height="34"/&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="28" y="275" width="358" height="181"&gt;
+                  &lt;XCUIElementTypeTextField type="XCUIElementTypeTextField" value="xxx-xxx-xxxx" name="editTextPhoneNumber" label="phonenumber" enabled="true" visible="true" x="53" y="303" width="308" height="40"/&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonOTP" label="Request OTP code via SMS" enabled="false" visible="true" x="58" y="368" width="298" height="39"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Request OTP code via SMS" name="Request OTP code via SMS" label="Request OTP code via SMS" enabled="true" visible="true" x="106" y="374" width="202" height="27"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonViewRecentPhoneNumber" label="View recent login phone number" enabled="true" visible="true" x="58" y="419" width="298" height="33"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="View recent login phone number" name="View recent login phone number" label="View recent login phone number" enabled="true" visible="false" x="112" y="425" width="190" height="21"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"/&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeToolbar type="XCUIElementTypeToolbar" name="Toolbar" label="Toolbar" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+              &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Done" label="Done" enabled="true" visible="true" x="348" y="421" width="66" height="44"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Toolbar Title Button" label="Toolbar Title Button" enabled="true" visible="true" x="167" y="429" width="80" height="28"&gt;
+                &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="false" visible="true" x="167" y="429" width="80" height="28"&gt;
+                  &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="xxx-xxx-xxxx" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="true" visible="true" x="167" y="435" width="80" height="16"/&gt;
+                &lt;/XCUIElementTypeButton&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeToolbar&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="271"/&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="44"/&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="-135" width="414" height="1245"&gt;
+              &lt;XCUIElementTypeScrollView type="XCUIElementTypeScrollView" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Typing Predictions" label="Typing Predictions" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                  &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="30" y="465" width="354" height="45"&gt;
+                    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="suggestion" label="suggestion" enabled="true" visible="true" x="30" y="465" width="354" height="45"/&gt;
+                  &lt;/XCUIElementTypeOther&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeKeyboard type="XCUIElementTypeKeyboard" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="1" label="1" enabled="true" visible="true" x="0" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="2" label="2" enabled="true" visible="true" x="136" y="510" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="3" label="3" enabled="true" visible="true" x="277" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="4" label="4" enabled="true" visible="true" x="0" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="5" label="5" enabled="true" visible="true" x="136" y="567" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="6" label="6" enabled="true" visible="true" x="277" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="7" label="7" enabled="true" visible="true" x="0" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="8" label="8" enabled="true" visible="true" x="136" y="623" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="9" label="9" enabled="true" visible="true" x="277" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" enabled="true" visible="true" x="-2" y="679" width="139" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="0" label="0" enabled="true" visible="true" x="136" y="679" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="Delete" label="Delete" enabled="true" visible="true" x="277" y="679" width="137" height="57"/&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeKeyboard&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+&lt;/XCUIElementTypeApplication&gt;&lt;/AppiumAUT&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201220 22:45:45.018" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201220 22:45:45.018" starttime="20201220 22:45:44.791"></status>
+</kw>
+<msg timestamp="20201220 22:45:45.018" level="FAIL">Page should have contained element 'accessibility_id=Login with this number' but did not</msg>
+<status status="FAIL" endtime="20201220 22:45:45.018" starttime="20201220 22:45:43.351"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:48.516" level="INFO">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;AppiumAUT&gt;&lt;XCUIElementTypeApplication type="XCUIElementTypeApplication" name="beta" label="beta" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+          &lt;XCUIElementTypeNavigationBar type="XCUIElementTypeNavigationBar" name="My dtac Numbers" enabled="true" visible="true" x="0" y="20" width="414" height="44"&gt;
+            &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Back" label="Back" enabled="true" visible="true" x="0" y="20" width="44" height="44"/&gt;
+            &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="My dtac Numbers" name="My dtac Numbers" label="My dtac Numbers" enabled="true" visible="true" x="137" y="30" width="140" height="25"/&gt;
+          &lt;/XCUIElementTypeNavigationBar&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="64" width="414" height="672"&gt;
+                &lt;XCUIElementTypeImage type="XCUIElementTypeImage" name="dtac_logo" enabled="true" visible="false" x="165" y="98" width="84" height="49"/&gt;
+                &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="logintitle" name="labelTitle" label="logintitle" enabled="true" visible="true" x="44" y="202" width="326" height="34"/&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="28" y="275" width="358" height="181"&gt;
+                  &lt;XCUIElementTypeTextField type="XCUIElementTypeTextField" value="xxx-xxx-xxxx" name="editTextPhoneNumber" label="phonenumber" enabled="true" visible="true" x="53" y="303" width="308" height="40"/&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonOTP" label="Request OTP code via SMS" enabled="false" visible="true" x="58" y="368" width="298" height="39"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Request OTP code via SMS" name="Request OTP code via SMS" label="Request OTP code via SMS" enabled="true" visible="true" x="106" y="374" width="202" height="27"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonViewRecentPhoneNumber" label="View recent login phone number" enabled="true" visible="true" x="58" y="419" width="298" height="33"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="View recent login phone number" name="View recent login phone number" label="View recent login phone number" enabled="true" visible="false" x="112" y="425" width="190" height="21"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"/&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeToolbar type="XCUIElementTypeToolbar" name="Toolbar" label="Toolbar" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+              &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Done" label="Done" enabled="true" visible="true" x="348" y="421" width="66" height="44"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Toolbar Title Button" label="Toolbar Title Button" enabled="true" visible="true" x="167" y="429" width="80" height="28"&gt;
+                &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="false" visible="true" x="167" y="429" width="80" height="28"&gt;
+                  &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="xxx-xxx-xxxx" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="true" visible="true" x="167" y="435" width="80" height="16"/&gt;
+                &lt;/XCUIElementTypeButton&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeToolbar&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="271"/&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="44"/&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="-135" width="414" height="1245"&gt;
+              &lt;XCUIElementTypeScrollView type="XCUIElementTypeScrollView" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Typing Predictions" label="Typing Predictions" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                  &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="30" y="465" width="354" height="45"&gt;
+                    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="suggestion" label="suggestion" enabled="true" visible="true" x="30" y="465" width="354" height="45"/&gt;
+                  &lt;/XCUIElementTypeOther&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeKeyboard type="XCUIElementTypeKeyboard" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="1" label="1" enabled="true" visible="true" x="0" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="2" label="2" enabled="true" visible="true" x="136" y="510" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="3" label="3" enabled="true" visible="true" x="277" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="4" label="4" enabled="true" visible="true" x="0" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="5" label="5" enabled="true" visible="true" x="136" y="567" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="6" label="6" enabled="true" visible="true" x="277" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="7" label="7" enabled="true" visible="true" x="0" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="8" label="8" enabled="true" visible="true" x="136" y="623" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="9" label="9" enabled="true" visible="true" x="277" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" enabled="true" visible="true" x="-2" y="679" width="139" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="0" label="0" enabled="true" visible="true" x="136" y="679" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="Delete" label="Delete" enabled="true" visible="true" x="277" y="679" width="137" height="57"/&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeKeyboard&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+&lt;/XCUIElementTypeApplication&gt;&lt;/AppiumAUT&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201220 22:45:48.729" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201220 22:45:48.729" starttime="20201220 22:45:48.516"></status>
+</kw>
+<msg timestamp="20201220 22:45:48.729" level="FAIL">Page should have contained element 'accessibility_id=Login with this number' but did not</msg>
+<status status="FAIL" endtime="20201220 22:45:48.730" starttime="20201220 22:45:47.019"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:52.253" level="INFO">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;AppiumAUT&gt;&lt;XCUIElementTypeApplication type="XCUIElementTypeApplication" name="beta" label="beta" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+          &lt;XCUIElementTypeNavigationBar type="XCUIElementTypeNavigationBar" name="My dtac Numbers" enabled="true" visible="true" x="0" y="20" width="414" height="44"&gt;
+            &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Back" label="Back" enabled="true" visible="true" x="0" y="20" width="44" height="44"/&gt;
+            &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="My dtac Numbers" name="My dtac Numbers" label="My dtac Numbers" enabled="true" visible="true" x="137" y="30" width="140" height="25"/&gt;
+          &lt;/XCUIElementTypeNavigationBar&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="64" width="414" height="672"&gt;
+                &lt;XCUIElementTypeImage type="XCUIElementTypeImage" name="dtac_logo" enabled="true" visible="false" x="165" y="98" width="84" height="49"/&gt;
+                &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="logintitle" name="labelTitle" label="logintitle" enabled="true" visible="true" x="44" y="202" width="326" height="34"/&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="28" y="275" width="358" height="181"&gt;
+                  &lt;XCUIElementTypeTextField type="XCUIElementTypeTextField" value="xxx-xxx-xxxx" name="editTextPhoneNumber" label="phonenumber" enabled="true" visible="true" x="53" y="303" width="308" height="40"/&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonOTP" label="Request OTP code via SMS" enabled="false" visible="true" x="58" y="368" width="298" height="39"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Request OTP code via SMS" name="Request OTP code via SMS" label="Request OTP code via SMS" enabled="true" visible="true" x="106" y="374" width="202" height="27"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonViewRecentPhoneNumber" label="View recent login phone number" enabled="true" visible="true" x="58" y="419" width="298" height="33"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="View recent login phone number" name="View recent login phone number" label="View recent login phone number" enabled="true" visible="false" x="112" y="425" width="190" height="21"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"/&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeToolbar type="XCUIElementTypeToolbar" name="Toolbar" label="Toolbar" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+              &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Done" label="Done" enabled="true" visible="true" x="348" y="421" width="66" height="44"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Toolbar Title Button" label="Toolbar Title Button" enabled="true" visible="true" x="167" y="429" width="80" height="28"&gt;
+                &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="false" visible="true" x="167" y="429" width="80" height="28"&gt;
+                  &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="xxx-xxx-xxxx" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="true" visible="true" x="167" y="435" width="80" height="16"/&gt;
+                &lt;/XCUIElementTypeButton&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeToolbar&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="271"/&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="44"/&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="-135" width="414" height="1245"&gt;
+              &lt;XCUIElementTypeScrollView type="XCUIElementTypeScrollView" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Typing Predictions" label="Typing Predictions" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                  &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="30" y="465" width="354" height="45"&gt;
+                    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="suggestion" label="suggestion" enabled="true" visible="true" x="30" y="465" width="354" height="45"/&gt;
+                  &lt;/XCUIElementTypeOther&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeKeyboard type="XCUIElementTypeKeyboard" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="1" label="1" enabled="true" visible="true" x="0" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="2" label="2" enabled="true" visible="true" x="136" y="510" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="3" label="3" enabled="true" visible="true" x="277" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="4" label="4" enabled="true" visible="true" x="0" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="5" label="5" enabled="true" visible="true" x="136" y="567" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="6" label="6" enabled="true" visible="true" x="277" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="7" label="7" enabled="true" visible="true" x="0" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="8" label="8" enabled="true" visible="true" x="136" y="623" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="9" label="9" enabled="true" visible="true" x="277" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" enabled="true" visible="true" x="-2" y="679" width="139" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="0" label="0" enabled="true" visible="true" x="136" y="679" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="Delete" label="Delete" enabled="true" visible="true" x="277" y="679" width="137" height="57"/&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeKeyboard&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+&lt;/XCUIElementTypeApplication&gt;&lt;/AppiumAUT&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201220 22:45:52.470" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201220 22:45:52.470" starttime="20201220 22:45:52.254"></status>
+</kw>
+<msg timestamp="20201220 22:45:52.471" level="FAIL">Page should have contained element 'accessibility_id=Login with this number' but did not</msg>
+<status status="FAIL" endtime="20201220 22:45:52.471" starttime="20201220 22:45:50.731"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20201220 22:45:56.037" level="INFO">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;AppiumAUT&gt;&lt;XCUIElementTypeApplication type="XCUIElementTypeApplication" name="beta" label="beta" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+          &lt;XCUIElementTypeNavigationBar type="XCUIElementTypeNavigationBar" name="My dtac Numbers" enabled="true" visible="true" x="0" y="20" width="414" height="44"&gt;
+            &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Back" label="Back" enabled="true" visible="true" x="0" y="20" width="44" height="44"/&gt;
+            &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="My dtac Numbers" name="My dtac Numbers" label="My dtac Numbers" enabled="true" visible="true" x="137" y="30" width="140" height="25"/&gt;
+          &lt;/XCUIElementTypeNavigationBar&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="64" width="414" height="672"&gt;
+                &lt;XCUIElementTypeImage type="XCUIElementTypeImage" name="dtac_logo" enabled="true" visible="false" x="165" y="98" width="84" height="49"/&gt;
+                &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="logintitle" name="labelTitle" label="logintitle" enabled="true" visible="true" x="44" y="202" width="326" height="34"/&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="28" y="275" width="358" height="181"&gt;
+                  &lt;XCUIElementTypeTextField type="XCUIElementTypeTextField" value="xxx-xxx-xxxx" name="editTextPhoneNumber" label="phonenumber" enabled="true" visible="true" x="53" y="303" width="308" height="40"/&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonOTP" label="Request OTP code via SMS" enabled="false" visible="true" x="58" y="368" width="298" height="39"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Request OTP code via SMS" name="Request OTP code via SMS" label="Request OTP code via SMS" enabled="true" visible="true" x="106" y="374" width="202" height="27"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                  &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="buttonViewRecentPhoneNumber" label="View recent login phone number" enabled="true" visible="true" x="58" y="419" width="298" height="33"&gt;
+                    &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="View recent login phone number" name="View recent login phone number" label="View recent login phone number" enabled="true" visible="false" x="112" y="425" width="190" height="21"/&gt;
+                  &lt;/XCUIElementTypeButton&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="414" height="736"/&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeToolbar type="XCUIElementTypeToolbar" name="Toolbar" label="Toolbar" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="44"&gt;
+              &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="Done" label="Done" enabled="true" visible="true" x="348" y="421" width="66" height="44"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Toolbar Title Button" label="Toolbar Title Button" enabled="true" visible="true" x="167" y="429" width="80" height="28"&gt;
+                &lt;XCUIElementTypeButton type="XCUIElementTypeButton" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="false" visible="true" x="167" y="429" width="80" height="28"&gt;
+                  &lt;XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="xxx-xxx-xxxx" name="xxx-xxx-xxxx" label="xxx-xxx-xxxx" enabled="true" visible="true" x="167" y="435" width="80" height="16"/&gt;
+                &lt;/XCUIElementTypeButton&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeToolbar&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="271"/&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+  &lt;XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="414" height="736"&gt;
+      &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="421" width="414" height="315"&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="421" width="414" height="44"/&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="-135" width="414" height="1245"&gt;
+              &lt;XCUIElementTypeScrollView type="XCUIElementTypeScrollView" enabled="true" visible="false" x="0" y="465" width="414" height="45"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="Typing Predictions" label="Typing Predictions" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="465" width="414" height="45"&gt;
+                  &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="30" y="465" width="354" height="45"&gt;
+                    &lt;XCUIElementTypeOther type="XCUIElementTypeOther" name="suggestion" label="suggestion" enabled="true" visible="true" x="30" y="465" width="354" height="45"/&gt;
+                  &lt;/XCUIElementTypeOther&gt;
+                &lt;/XCUIElementTypeOther&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="510" width="414" height="226"/&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeOther&gt;
+        &lt;/XCUIElementTypeOther&gt;
+        &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+          &lt;XCUIElementTypeKeyboard type="XCUIElementTypeKeyboard" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+            &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+              &lt;XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="510" width="414" height="226"&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="1" label="1" enabled="true" visible="true" x="0" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="2" label="2" enabled="true" visible="true" x="136" y="510" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="3" label="3" enabled="true" visible="true" x="277" y="510" width="137" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="4" label="4" enabled="true" visible="true" x="0" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="5" label="5" enabled="true" visible="true" x="136" y="567" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="6" label="6" enabled="true" visible="true" x="277" y="567" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="7" label="7" enabled="true" visible="true" x="0" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="8" label="8" enabled="true" visible="true" x="136" y="623" width="142" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="9" label="9" enabled="true" visible="true" x="277" y="623" width="137" height="56"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" enabled="true" visible="true" x="-2" y="679" width="139" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="0" label="0" enabled="true" visible="true" x="136" y="679" width="142" height="57"/&gt;
+                &lt;XCUIElementTypeKey type="XCUIElementTypeKey" name="Delete" label="Delete" enabled="true" visible="true" x="277" y="679" width="137" height="57"/&gt;
+              &lt;/XCUIElementTypeOther&gt;
+            &lt;/XCUIElementTypeOther&gt;
+          &lt;/XCUIElementTypeKeyboard&gt;
+        &lt;/XCUIElementTypeOther&gt;
+      &lt;/XCUIElementTypeOther&gt;
+    &lt;/XCUIElementTypeOther&gt;
+  &lt;/XCUIElementTypeWindow&gt;
+&lt;/XCUIElementTypeApplication&gt;&lt;/AppiumAUT&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201220 22:45:56.259" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201220 22:45:56.259" starttime="20201220 22:45:56.037"></status>
+</kw>
+<msg timestamp="20201220 22:45:56.271" level="FAIL">Page should have contained element 'accessibility_id=Login with this number' but did not</msg>
+<status status="FAIL" endtime="20201220 22:45:56.271" starttime="20201220 22:45:54.473"></status>
+</kw>
+<msg timestamp="20201220 22:45:56.271" level="FAIL">Keyword 'Page Should Contain Element' failed after retrying for 10 seconds. The last error was: Page should have contained element 'accessibility_id=Login with this number' but did not</msg>
+<status status="FAIL" endtime="20201220 22:45:56.271" starttime="20201220 22:45:43.351"></status>
+</kw>
+<status status="FAIL" endtime="20201220 22:45:56.271" starttime="20201220 22:45:43.351"></status>
+</kw>
+<status status="FAIL" endtime="20201220 22:45:56.271" starttime="20201220 22:45:41.651"></status>
+</kw>
+<tags>
+<tag>CLIPostpaid</tag>
+</tags>
+<status status="FAIL" endtime="20201220 22:45:56.272" critical="yes" starttime="20201220 22:45:31.029">Keyword 'Page Should Contain Element' failed after retrying for 10 seconds. The last error was: Page should have contained element 'accessibility_id=Login with this number' but did not</status>
+</test>
+<status status="FAIL" endtime="20201220 22:45:56.272" starttime="20201220 22:45:30.835"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">CLIPostpaid</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Login" pass="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
