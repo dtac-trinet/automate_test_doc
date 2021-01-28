@@ -216,7 +216,7 @@ $ robot --nostatusrc -d farm-Nexus5X \
 -v ar_pfversion:11.0.0 \
 -v ar_devicename:SamsungS20 \
 -v ar_Lag:EN \
--v ar_udid:Nexus_5X_API_30
+-v ar_udid:Nexus_5X_API_30 \
 -i Farm*
 testcase/Login-Farm.robot
 ```
@@ -235,7 +235,7 @@ $ robot --nostatusrc -d farm-iPhoneXr \
 -v ar_pfversion:12.5 \
 -v ar_devicename:iPhoneXr \
 -v ar_Lag:EN \
--v ar_udid:44752AA7-1E63-412E-AA80-9342438D7302
+-v ar_udid:44752AA7-1E63-412E-AA80-9342438D7302 \
 -i Farm*
 testcase/Login-Farm.robot
 ```
